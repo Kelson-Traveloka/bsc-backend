@@ -11,8 +11,8 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "bsc-fe-traveloka.vercel.app"
+    "http://127.0.0.1:3000", 
+    "https://bsc-fe-traveloka.vercel.app/"
 ]
 
 app.add_middleware(
