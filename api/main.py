@@ -5,8 +5,22 @@ import re
 from datetime import datetime
 from pathlib import Path
 import tempfile
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+origins = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,        # or ["*"] to allow all
+    allow_credentials=True,
+    allow_methods=["*"],          # GET, POST, PUT, etc.
+    allow_headers=["*"],          # Any headers
+)
 
 @app.get("/")
 def root():
