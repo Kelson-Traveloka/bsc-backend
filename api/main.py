@@ -17,10 +17,10 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,        # or ["*"] to allow all
+    allow_origins=origins,        
     allow_credentials=True,
-    allow_methods=["*"],          # GET, POST, PUT, etc.
-    allow_headers=["*"],          # Any headers
+    allow_methods=["*"],         
+    allow_headers=["*"],         
 )
 
 @app.get("/")
